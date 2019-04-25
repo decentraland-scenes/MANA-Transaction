@@ -28,11 +28,11 @@ function sendMana(){
 
 // button
 let button = new Entity()
-button.add(new BoxShape())
-button.add(new Transform({
+button.addComponent(new BoxShape())
+button.addComponent(new Transform({
   position: new Vector3( 3, 1, 3)
 }))
-button.add(new OnClick(e=>{
+button.addComponent(new OnPointerDown(e=>{
   sendMana()
 }))
 engine.addEntity(button)
@@ -40,24 +40,24 @@ engine.addEntity(button)
 
 // text labels over button
 let sign = new Entity()
-sign.add(new Transform({
+sign.addComponent(new Transform({
   position: new Vector3( 3, 2, 3)
 }))
 let t = new TextShape("Click to get your FREE MANA!")
 t.textWrapping = true
-sign.add(t)
-//sign.add(new Billboard(true, false, false))
+sign.addComponent(t)
+//sign.addComponent(new Billboard(true, false, false))
 engine.addEntity(sign)
 
 
 let smallPrint = new Entity()
-smallPrint.add(new Transform({
+smallPrint.addComponent(new Transform({
   position: new Vector3( 3, 1.6, 3)
 }))
 let ts = new TextShape("(In Ropsten network)")
 ts.textWrapping = true
 ts.fontSize = 25
-smallPrint.add(ts)
-//smallPrint.add(new Billboard(true, false, false))
+smallPrint.addComponent(ts)
+//smallPrint.addComponent(new Billboard(true, false, false))
 
 engine.addEntity(smallPrint)
