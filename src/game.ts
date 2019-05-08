@@ -56,7 +56,7 @@ smallPrint.addComponent(new Transform({
 }))
 let ts = new TextShape("(In Ropsten network)")
 ts.textWrapping = true
-ts.fontSize = 25
+ts.fontSize = 3.5
 smallPrint.addComponent(ts)
 //smallPrint.addComponent(new Billboard(true, false, false))
 
