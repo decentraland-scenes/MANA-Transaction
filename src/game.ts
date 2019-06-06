@@ -32,7 +32,7 @@ button.addComponent(new BoxShape())
 button.addComponent(new Transform({
   position: new Vector3( 3, 1, 3)
 }))
-button.addComponent(new OnPointerDown(e=>{
+button.addComponent(new OnClick(e=>{
   sendMana()
 }))
 engine.addEntity(button)
