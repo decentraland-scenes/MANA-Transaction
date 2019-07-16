@@ -44,7 +44,8 @@ sign.addComponent(new Transform({
   position: new Vector3( 3, 2, 3)
 }))
 let t = new TextShape("Click to get your FREE MANA!")
-t.textWrapping = true
+//t.textWrapping = true
+t.fontSize = 3
 sign.addComponent(t)
 //sign.addComponent(new Billboard(true, false, false))
 engine.addEntity(sign)
@@ -52,11 +53,11 @@ engine.addEntity(sign)
 
 let smallPrint = new Entity()
 smallPrint.addComponent(new Transform({
-  position: new Vector3( 3, 1.6, 3)
+  position: new Vector3( 3, 1.8, 3)
 }))
 let ts = new TextShape("(In Ropsten network)")
-ts.textWrapping = true
-ts.fontSize = 3.5
+//ts.textWrapping = true
+ts.fontSize = 1
 smallPrint.addComponent(ts)
 //smallPrint.addComponent(new Billboard(true, false, false))
 

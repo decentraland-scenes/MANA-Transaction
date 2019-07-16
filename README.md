@@ -3,7 +3,7 @@
 A simple scene that uses the MANA smart contract and the EthConnect library to send the user an amount of MANA on the Ropsten test network.
 
 
-[Explore the scene](https://mana-transaction-sxjmryeayj.now.sh): this link takes you to a copy of the scene deployed to a remote server where you can interact with it just as if you were running `dcl start` locally.
+[Explore the scene](https://mana-transaction-jfsdmqqnmp.now.sh): this link takes you to a copy of the scene deployed to a remote server where you can interact with it just as if you were running `dcl start` locally.
 
 **Install the CLI**
 
