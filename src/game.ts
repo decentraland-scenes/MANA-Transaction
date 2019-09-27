@@ -45,6 +45,7 @@ sign.addComponent(new Transform({
 }))
 let t = new TextShape("Click to get your FREE MANA!")
 t.fontSize = 3
+t.color = Color3.Black()
 sign.addComponent(t)
 //sign.addComponent(new Billboard(true, false, false))
 engine.addEntity(sign)
@@ -56,6 +57,7 @@ smallPrint.addComponent(new Transform({
 }))
 let ts = new TextShape("(In Ropsten network)")
 ts.fontSize = 1
+ts.color = Color3.Black()
 smallPrint.addComponent(ts)
 //smallPrint.addComponent(new Billboard(true, false, false))
 
