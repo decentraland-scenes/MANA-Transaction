@@ -1,6 +1,6 @@
 import { getProvider } from '@decentraland/web3-provider'
 import { getUserAccount } from '@decentraland/EthereumController'
-import * as EthConnect from '../node_modules/eth-connect/esm'
+import * as EthConnect from 'eth-connect'
 import { abi } from './abi/fakeMANA'
 
 // function to send mana
@@ -19,7 +19,7 @@ function sendMana() {
         '0xaFA48Fad27C7cAB28dC6E970E4BFda7F7c8D60Fb',
         100,
         {
-          from: address
+          from: address,
         }
       )
       log(res)
@@ -34,12 +34,12 @@ let button = new Entity()
 button.addComponent(new BoxShape())
 button.addComponent(
   new Transform({
-    position: new Vector3(3, 1, 3)
+    position: new Vector3(3, 1, 3),
   })
 )
 button.addComponent(
   new OnPointerDown(
-    e => {
+    (e) => {
       sendMana()
     },
     { button: ActionButton.POINTER, hoverText: 'Get MANA!' }
@@ -51,7 +51,7 @@ engine.addEntity(button)
 let sign = new Entity()
 sign.addComponent(
   new Transform({
-    position: new Vector3(3, 2, 3)
+    position: new Vector3(3, 2, 3),
   })
 )
 let t = new TextShape('Click to get your FREE MANA!')
@@ -64,7 +64,7 @@ engine.addEntity(sign)
 let smallPrint = new Entity()
 smallPrint.addComponent(
   new Transform({
-    position: new Vector3(3, 1.8, 3)
+    position: new Vector3(3, 1.8, 3),
   })
 )
 let ts = new TextShape('(In Ropsten network)')
