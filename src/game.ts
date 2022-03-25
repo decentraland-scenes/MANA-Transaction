@@ -19,22 +19,22 @@ function sendMana() {
         '0xaFA48Fad27C7cAB28dC6E970E4BFda7F7c8D60Fb',
         100,
         {
-          from: address,
+          from: address
         }
       )
       log(res)
     } catch (error) {
       log(error.toString())
     }
-  })
+  }).catch((error) => log(error))
 }
 
 // button
-let button = new Entity()
+const button = new Entity()
 button.addComponent(new BoxShape())
 button.addComponent(
   new Transform({
-    position: new Vector3(3, 1, 3),
+    position: new Vector3(3, 1, 3)
   })
 )
 button.addComponent(
@@ -48,26 +48,26 @@ button.addComponent(
 engine.addEntity(button)
 
 // text labels over button
-let sign = new Entity()
+const sign = new Entity()
 sign.addComponent(
   new Transform({
-    position: new Vector3(3, 2, 3),
+    position: new Vector3(3, 2, 3)
   })
 )
-let t = new TextShape('Click to get your FREE MANA!')
+const t = new TextShape('Click to get your FREE MANA!')
 t.fontSize = 3
 t.color = Color3.Black()
 sign.addComponent(t)
 //sign.addComponent(new Billboard(true, false, false))
 engine.addEntity(sign)
 
-let smallPrint = new Entity()
+const smallPrint = new Entity()
 smallPrint.addComponent(
   new Transform({
-    position: new Vector3(3, 1.8, 3),
+    position: new Vector3(3, 1.8, 3)
   })
 )
-let ts = new TextShape('(In Ropsten network)')
+const ts = new TextShape('(In Ropsten network)')
 ts.fontSize = 1
 ts.color = Color3.Black()
 smallPrint.addComponent(ts)
